@@ -64,8 +64,8 @@ app.post("/days", (req, res) => {
   //console.log(req.body.day);
   const { day, id } = req.body;
   const insertDay = new daySchema({
-    id: id,
-    day: day,
+    id: 100,
+    day: 100,
   });
   insertDay
     .save()
@@ -74,7 +74,7 @@ app.post("/days", (req, res) => {
       res.json({ state: "ok" });
     })
     .catch((err) => {
-      console.log("err");
+      console.log(err);
     });
 });
 
